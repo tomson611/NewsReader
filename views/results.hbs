@@ -1,0 +1,10 @@
+{{#each json.articles}}
+    <div class="article">
+        <h1>{{this.title}}</h1>
+        <h2>{{this.description}}</h2>
+        {{#if this.urlToImage}}
+            <img src="{{this.urlToImage}}" alt="image accompanying the article">
+        {{/if}}
+        <a href="{{this.url}}" target="_blank" class="button">Czytaj</a>
+    </div>
+{{/each}}
