@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({
     extended: true,
 }));
+
 app.engine('.hbs', hbs({
     extname: '.hbs',
 }));
