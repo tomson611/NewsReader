@@ -22,6 +22,12 @@ app.get('/', (req, res) => {
     res.render('home', {home_page});
 })
 
+app.get('/form', (req, res) => {
+    const form_page = true;
+
+    res.render('form', {form_page});
+})
+
 app.post('/articles', (req, res) => {
     const category = req.body.category;
     fetch(`https://newsapi.org/v2/top-headlines?country=pl&category=${category}&apiKey=${API_KEY}&pageSize=30`)
