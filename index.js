@@ -17,7 +17,9 @@ app.set('view engine', '.hbs');
 
 
 app.get('/', (req, res) => {
-    res.render('home')
+    const home_page = true;
+
+    res.render('home', {home_page});
 })
 
 app.post('/articles', (req, res) => {
