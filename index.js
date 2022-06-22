@@ -23,18 +23,20 @@ app.get('/', (req, res) => {
 })
 
 app.get('/form', (req, res) => {
-    const form_page = true;
+    const current_page = true;
 
-    res.render('form', {form_page});
+    res.render('form', {current_page});
 })
 
 app.post('/articles', (req, res) => {
     const category = req.body.category;
+    const current_page = true;
     fetch(`https://newsapi.org/v2/top-headlines?country=pl&category=${category}&apiKey=${API_KEY}&pageSize=30`)
         .then(res => res.json())
         .then(json => {
             res.render('results', {
-                json
+                json,
+                current_page,
             });
         })
 })
