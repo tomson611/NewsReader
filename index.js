@@ -1,7 +1,10 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const fetch = require('node-fetch');
-const {API_KEY} = require('./utils/config') || process.env.API_KEY;
+let {API_KEY} = process.env.API_KEY;
+if (API_KEY === undefined) {
+    API_KEY = require('./utils/config')
+}
 const app = express();
 
 app.use(express.static('public'))
