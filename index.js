@@ -1,7 +1,7 @@
 const express = require('express');
 const hbs = require('express-handlebars');
 const fetch = require('node-fetch');
-const {API_KEY} = require('./utils/config') || process.env.API_KEY;
+const {API_KEY} = process.env.API_KEY || require('./utils/config');
 const app = express();
 
 app.use(express.static('public'))
@@ -45,7 +45,6 @@ let port = process.env.PORT;
 if (port === null || port === "" || port === undefined) {
     port = 3001;
 }
-;
 
 app.listen(port, 'localhost', () => {
     console.log('Listening on http://localhost:3001');
