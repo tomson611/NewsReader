@@ -21,13 +21,9 @@ h1, h2 {
 
 h2 {
     font-weight: 300;
-    padding: 20px 5px;
-    margin: 0 20px;
+
 }
 
-.h2_home {
-    font-weight: 400;
-}
 
 .article {
     display: flex;
@@ -89,8 +85,10 @@ img {
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
 
+/* form */
+
 .form {
-    margin: 0 auto;
+    margin-top: 1.5rem;
 }
 
 .form-center {
@@ -98,4 +96,13 @@ img {
     justify-content: center;
 }
 
+.form-check {
+    margin-bottom: 1rem;
+}
+
+.h2_form {
+    font-weight: 400;
+    padding: 1rem 2rem;
+    margin-top: 3.5rem;
+}
 
