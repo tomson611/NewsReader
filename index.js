@@ -28,17 +28,15 @@ app.get('/form', (req, res) => {
     res.render('form', {current_page});
 })
 
-app.post('/articles', (req, res) => {
+app.post('/articles', async (req, res) => {
     const category = req.body.category;
     const current_page = true;
-    fetch(`https://newsapi.org/v2/top-headlines?country=pl&category=${category}&apiKey=${API_KEY}&pageSize=30`)
-        .then(res => res.json())
-        .then(json => {
-            res.render('results', {
-                json,
-                current_page,
-            });
-        })
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=pl&category=${category}&apiKey=${API_KEY}&pageSize=30`)
+    const json = await response.json();
+    res.render('results', {
+        json,
+        current_page,
+    })
 })
 
 let port = process.env.PORT;
