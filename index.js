@@ -30,8 +30,9 @@ app.get('/form', (req, res) => {
 
 app.post('/articles', async (req, res) => {
     const category = req.body.category;
+    const country = req.body.country;
     const current_page = true;
-    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=pl&category=${category}&apiKey=${API_KEY}&pageSize=30`)
+    const response = await fetch(`https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${API_KEY}&pageSize=30`)
     const json = await response.json();
     res.render('results', {
         json,
