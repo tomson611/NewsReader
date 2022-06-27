@@ -88,7 +88,7 @@ img {
 /* form */
 
 .form {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 .form-center {
@@ -96,8 +96,12 @@ img {
     justify-content: center;
 }
 
-.form-check {
+.form-control {
     margin-bottom: 1rem;
+}
+
+.form-check {
+    margin-bottom: 0.5rem;
 }
 
 .h2_form {
