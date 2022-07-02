@@ -88,7 +88,7 @@ img {
 /* form */
 
 .form {
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 
 .form-center {
@@ -104,9 +104,11 @@ img {
     margin-bottom: 0.5rem;
 }
 
-.h2_form {
-    font-weight: 400;
-    padding: 1rem 2rem;
-    margin-top: 3.5rem;
+.form-bold {
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
 }
+
 
