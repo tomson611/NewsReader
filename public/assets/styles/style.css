@@ -24,6 +24,10 @@ h2 {
 
 }
 
+.background-white {
+    background-color: #fff;
+}
+
 
 .article {
     display: flex;
