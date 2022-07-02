@@ -1,8 +1,8 @@
-<h2 class="h2_form">Pick a category to read about</h2>
 <div class="form-center">
     <form class="form" method="post" action="/articles">
+        <p class="form-bold">Category</p>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="category" id="option1" value="general" required>
+            <input class="form-check-input" type="radio" name="category" id="option1" value="general" required checked>
             <label class="form-check-label" for="option1">
                 General
             </label>
@@ -38,7 +38,7 @@
             </label>
         </div>
         <div class="form-group">
-            <label for="countrySelect">Country</label>
+            <label for="countrySelect" class="form-bold">Country</label>
             <select class="form-control" id="countrySelect" name="country">
                 <option value="ae">United Arab Emirates
                 <option>
