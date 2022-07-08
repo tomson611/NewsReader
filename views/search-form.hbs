@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="form-center">
+        <form action="/search-results" class="form" method="post">
+            <label for="search" class="form-label form-bold">Search</label>
+            <input type="text" id="search" class="form-control " name="term" aria-describedby="searchHelpBlock"
+                   placeholder="Search term" maxlength="500" required>
+
+            <div class="form-group">
+                <label for="languageSelect" class="form-bold">Language</label>
+                <select class="form-control" id="languageSelect" name="language" required>
+                    <option value="en">English
+                    </option>
+                    <option value="ar">Arabic
+                    </option>
+                    <option value="de">German
+                    </option>
+                    <option value="es">Spanish
+                    </option>
+                    <option value="fr">French
+                    </option>
+                    <option value="he">Hebrew
+                    </option>
+                    <option value="it">Italian
+                    </option>
+                    <option value="nl">Dutch
+                    </option>
+                    <option value="pt">Portuguese
+                    </option>
+                    <option value="sv">Swedish
+                    </option>
+                    <option value="no">Norwegian
+                    </option>
+                </select>
+            </div>
+
+            <p class="form-bold">Sort By</p>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortby" id="relevancy" value="relevancy" checked>
+                <label class="form-check-label" for="relevancy">
+                    Relevancy
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortby" id="popularity" value="popularity">
+                <label class="form-check-label" for="popularity">
+                    Popularity
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sortby" id="publishedAt" value="publishedAt">
+                <label class="form-check-label" for="publishedAt">
+                    Newest
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2 mt-2">Search</button>
+        </form>
+    </div>
+</div>
