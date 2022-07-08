@@ -23,8 +23,10 @@
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link {{#if home_page }} active{{/if}}"
                 {{#if home_page}}aria-current="page" {{/if}}>Home</a></li>
-            <li class="nav-item"><a href="/form" class="nav-link {{#if current_page  }} active{{/if}}"
-                {{#if current_page}}aria-current="page" {{/if}}>Read</a></li>
+            <li class="nav-item"><a href="/form" class="nav-link {{#if read_page  }} active{{/if}}"
+                {{#if read_page}}aria-current="page" {{/if}}>Read</a></li>
+            <li class="nav-item"><a href="/search-form" class="nav-link {{#if search_page  }} active{{/if}}"
+                {{#if search_page}}aria-current="page" {{/if}}>Search</a></li>
         </ul>
     </header>
 </div>
