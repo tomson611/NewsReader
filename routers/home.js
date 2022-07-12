@@ -4,9 +4,9 @@ const homeRouter = express.Router();
 
 homeRouter
     .get('/', (req, res) => {
-        const home_page = true;
+        const homePage = true;
 
-        res.render('home', {home_page});
+        res.render('home', {homePage});
     });
 
 module.exports = {
