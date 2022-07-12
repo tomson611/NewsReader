@@ -1,5 +1,6 @@
 {{#each json.articles}}
     <div class="article h-100 p-5 bg-light border rounded-3">
+        <p>{{this.source.name}}</p>
         <h1>{{this.title}}</h1>
         <h2>{{this.description}}</h2>
         {{#if this.urlToImage}}
