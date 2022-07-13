@@ -1,6 +1,6 @@
 const fetch = require("node-fetch");
 const express = require('express');
-const {API_KEY} = require("../utils/config");
+const API_KEY = process.env.API_KEY;
 
 const readRouter = express.Router();
 const readPage = true;
