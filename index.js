@@ -1,8 +1,10 @@
 const express = require('express');
+require('express-async-errors');
 const hbs = require('express-handlebars');
 const {homeRouter} = require("./routers/home");
 const {readRouter} = require("./routers/read");
 const {searchRouter} = require("./routers/search");
+const {handleError} = require("./utils/errors");
 const app = express();
 
 app.use(express.static('public'))
@@ -19,6 +21,9 @@ app.set('view engine', '.hbs');
 app.use('/', homeRouter);
 app.use('/read', readRouter);
 app.use('/search', searchRouter);
+
+app.use(handleError);
+
 
 let port = process.env.PORT;
 if (port === null || port === "" || port === undefined) {
