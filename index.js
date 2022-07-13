@@ -30,6 +30,6 @@ if (port === null || port === "" || port === undefined) {
     port = 3001;
 }
 
-app.listen(port, 'localhost', () => {
+app.listen(port, () => {
     console.log('Listening on http://localhost:3001');
 })
